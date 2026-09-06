@@ -2,15 +2,13 @@
 
 Reference corpus directory.
 
-In a later phase this directory will hold **nine short scientific reference
-texts** used as the labeled examples for classification:
+This directory holds **nine short scientific reference texts** used as the
+labeled examples for the first local classifier:
 
 - 3 Computer Science
 - 3 Biology
 - 3 Economics
 
-Each text will be stored along with its category label, and later converted
-into embedding vectors for comparison.
-
-No papers or texts have been added yet — the corpus is created in a later phase,
-not in Phase 0.
+Each text is stored with an id and category label in `references.json`. The
+current baseline converts the texts into bag-of-words vectors for comparison.
+Those vectors are a local test baseline, not the final semantic model.
