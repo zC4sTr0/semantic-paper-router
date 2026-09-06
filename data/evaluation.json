@@ -1,0 +1,17 @@
+[
+  {"id": "cs-eval-001", "text": "A vision model is redesigned so serving predictions takes less time.", "expected_label": "computer_science", "case_type": "paraphrase"},
+  {"id": "cs-eval-002", "text": "Researchers introduce a fault-tolerant protocol for exchanging data among networked machines.", "expected_label": "computer_science", "case_type": "paraphrase"},
+  {"id": "cs-eval-003", "text": "A compiler pass lowers the memory footprint and runtime of generated programs.", "expected_label": "computer_science", "case_type": "paraphrase"},
+  {"id": "bio-eval-001", "text": "Amino-acid substitutions alter how efficiently a bacterium folds a protein.", "expected_label": "biology", "case_type": "paraphrase"},
+  {"id": "bio-eval-002", "text": "Scientists track transcription changes in cultured cells during thermal stress.", "expected_label": "biology", "case_type": "paraphrase"},
+  {"id": "bio-eval-003", "text": "The work examines how microbes interact with defenses mounted by their host.", "expected_label": "biology", "case_type": "paraphrase"},
+  {"id": "econ-eval-001", "text": "Household spending responds to decisions that move the policy interest rate.", "expected_label": "economics", "case_type": "paraphrase"},
+  {"id": "econ-eval-002", "text": "The researchers study whether jobless benefits change how people search for work.", "expected_label": "economics", "case_type": "paraphrase"},
+  {"id": "econ-eval-003", "text": "Tax incentives affect companies' decisions to invest and enter markets.", "expected_label": "economics", "case_type": "paraphrase"},
+  {"id": "oos-eval-001", "text": "A randomized trial compares two rehabilitation exercises after knee surgery.", "expected_label": "out_of_scope", "case_type": "out_of_scope"},
+  {"id": "oos-eval-002", "text": "Astronomers infer the composition of a distant planet from its transit spectrum.", "expected_label": "out_of_scope", "case_type": "out_of_scope"},
+  {"id": "oos-eval-003", "text": "Geologists reconstruct ancient climate from minerals preserved in volcanic rock.", "expected_label": "out_of_scope", "case_type": "out_of_scope"},
+  {"id": "oos-eval-004", "text": "A historian compares narrative voice in translations of medieval poetry.", "expected_label": "out_of_scope", "case_type": "out_of_scope"},
+  {"id": "oos-eval-005", "text": "An engineering team tests the fatigue life of a new bridge composite.", "expected_label": "out_of_scope", "case_type": "out_of_scope"},
+  {"id": "oos-eval-006", "text": "A clinical study evaluates a new intervention for chronic pain.", "expected_label": "out_of_scope", "case_type": "out_of_scope"}
+]
