@@ -1,0 +1,47 @@
+[
+  {
+    "id": "cs-001",
+    "category": "computer_science",
+    "text": "We propose a neural network architecture that reduces inference latency for image classification."
+  },
+  {
+    "id": "cs-002",
+    "category": "computer_science",
+    "text": "The study presents a distributed algorithm for reliable communication in computer networks."
+  },
+  {
+    "id": "cs-003",
+    "category": "computer_science",
+    "text": "We evaluate a compiler optimization that improves program execution time and memory use."
+  },
+  {
+    "id": "bio-001",
+    "category": "biology",
+    "text": "We investigate how a point mutation changes protein folding efficiency in Escherichia coli."
+  },
+  {
+    "id": "bio-002",
+    "category": "biology",
+    "text": "The experiment measures gene expression in cells exposed to heat stress."
+  },
+  {
+    "id": "bio-003",
+    "category": "biology",
+    "text": "We analyze the interaction between a bacterial pathogen and its host immune response."
+  },
+  {
+    "id": "econ-001",
+    "category": "economics",
+    "text": "This paper estimates how central bank interest rate changes affect household consumption."
+  },
+  {
+    "id": "econ-002",
+    "category": "economics",
+    "text": "We study the effect of unemployment insurance on workers' job search behavior."
+  },
+  {
+    "id": "econ-003",
+    "category": "economics",
+    "text": "The analysis measures how tax policy influences firm investment and market entry."
+  }
+]

@@ -75,10 +75,21 @@ oficial da AWS para Python).
 
 ---
 
-## O que EU vou implementar na próxima fase?
+## O que foi implementado
 
-Antes de avançarmos para a Fase 1, faça esta tarefa manual — eu não vou
-implementar por você:
+A primeira versão foi construída sem uma biblioteca numérica. Ela tem uma
+função de cosine similarity, validação dos vetores, um baseline de contagem de
+palavras e um classificador que escolhe a referência mais próxima. O baseline
+serve para estudar o fluxo; ele não transforma palavras diferentes em
+significados equivalentes.
+
+Os testes cobrem os casos básicos e o fluxo do corpus. O próximo passo é
+trocar somente o fornecedor de vetores por um modelo de embeddings, mantendo o
+classificador separado.
+
+## Exercício manual da Fase 1
+
+Antes de usar um modelo pronto, faça esta tarefa manual:
 
 1. **Crie dois vetores simples em Python.** Sugestão: represente duas frases
    curtas usando contagem de palavras. Ex.: `"hello world"` e
