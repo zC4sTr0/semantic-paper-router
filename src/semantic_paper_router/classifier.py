@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Sequence
 from dataclasses import dataclass
+from math import isfinite
 from typing import Protocol
 
 from .vectors import cosine_similarity
@@ -33,6 +34,38 @@ class ClassificationResult:
     score: float
     reference_id: str
     margin: float
+
+
+@dataclass(frozen=True)
+class ScopePolicy:
+    """Opt-in thresholds for rejecting uncertain or out-of-scope input."""
+
+    min_score: float = 0.0
+    min_margin: float = 0.0
+
+    def __post_init__(self) -> None:
+        if (
+            not isfinite(self.min_score)
+            or not isfinite(self.min_margin)
+            or self.min_score < 0
+            or self.min_score > 1
+            or self.min_margin < 0
+            or self.min_margin > 2
+        ):
+            raise ValueError("scope thresholds must be finite and within range")
+
+
+@dataclass(frozen=True)
+class ScopeDecision:
+    """Classification together with an explicit scope/uncertainty decision."""
+
+    classification: ClassificationResult
+    in_scope: bool
+    reason: str
+
+    @property
+    def category(self) -> str:
+        return self.classification.category if self.in_scope else "unknown"
 
 
 class SemanticClassifier:
@@ -65,3 +98,13 @@ class SemanticClassifier:
             reference_id=best_reference.id,
             margin=best_score - second_score,
         )
+
+    def classify_with_scope(
+        self, text: str, policy: ScopePolicy
+    ) -> ScopeDecision:
+        result = self.classify(text)
+        if result.score < policy.min_score:
+            return ScopeDecision(result, False, "score_below_threshold")
+        if result.margin < policy.min_margin:
+            return ScopeDecision(result, False, "margin_below_threshold")
+        return ScopeDecision(result, True, "accepted")

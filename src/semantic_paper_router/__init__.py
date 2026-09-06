@@ -5,6 +5,8 @@ from .classifier import (
     ClassificationResult,
     Embedder,
     Reference,
+    ScopeDecision,
+    ScopePolicy,
     SemanticClassifier,
 )
 from .embeddings import BagOfWordsEmbedder, BedrockTitanEmbedder
@@ -17,6 +19,8 @@ __all__ = [
     "load_references",
     "Embedder",
     "Reference",
+    "ScopeDecision",
+    "ScopePolicy",
     "SemanticClassifier",
     "cosine_similarity",
 ]

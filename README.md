@@ -38,6 +38,27 @@ credentials through the normal AWS SDK mechanisms, and pass it to
 `SemanticClassifier`. Its request/response contract is covered by offline fake
 client tests; no live AWS call is performed by the test suite.
 
+## Offline evaluation
+
+The repository includes a held-out evaluation set in `data/evaluation.json`
+and a dependency-free harness:
+
+```bash
+python scripts/evaluate.py \
+  --references data/references.json \
+  --examples data/evaluation.json \
+  --format json
+```
+
+The current baseline was evaluated on 15 examples (9 paraphrases and 6
+out-of-scope articles). It achieved **46.7% accuracy** without rejection:
+7/15 correct, 8/15 incorrect, and 0/6 out-of-scope articles rejected. The
+opt-in `ScopePolicy` can return `unknown`, but its thresholds are not yet
+calibrated. With `min_score=0.30`, it still achieved 46.7%, rejected 2/6
+out-of-scope examples, and incorrectly rejected 1 in-scope economics example.
+These results are a measured baseline, not a production-quality accuracy
+claim.
+
 ## Learning goals
 
 - Understand what vectors and embeddings are, and why semantically similar texts end up close together in vector space.
@@ -69,7 +90,7 @@ semantic-paper-router/
 ├── LEARNING.md      # personal study notes (pt-BR), not for recruiters
 ├── data/            # labeled reference corpus
 ├── src/             # package source
-├── tests/           # test suite (36 tests)
+├── tests/           # test suite (41 tests)
 ├── .gitignore
 └── pyproject.toml
 ```
