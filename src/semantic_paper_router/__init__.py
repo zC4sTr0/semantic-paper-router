@@ -7,9 +7,11 @@ from .classifier import (
     Reference,
     SemanticClassifier,
 )
+from .embeddings import BagOfWordsEmbedder
 
 __all__ = [
     "ClassificationResult",
+    "BagOfWordsEmbedder",
     "Embedder",
     "Reference",
     "SemanticClassifier",
