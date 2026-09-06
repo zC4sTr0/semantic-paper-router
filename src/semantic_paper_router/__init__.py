@@ -8,10 +8,12 @@ from .classifier import (
     SemanticClassifier,
 )
 from .embeddings import BagOfWordsEmbedder
+from .corpus import load_references
 
 __all__ = [
     "ClassificationResult",
     "BagOfWordsEmbedder",
+    "load_references",
     "Embedder",
     "Reference",
     "SemanticClassifier",
