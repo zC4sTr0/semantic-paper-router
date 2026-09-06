@@ -1,0 +1,208 @@
+{
+  "counts": {
+    "evaluated": 15,
+    "correct": 7,
+    "incorrect": 8
+  },
+  "accuracy": 0.4666666666666667,
+  "unknown": {
+    "expected": 6,
+    "predicted": 0
+  },
+  "confusion_matrix": {
+    "biology": {
+      "biology": 2,
+      "computer_science": 0,
+      "economics": 1,
+      "out_of_scope": 0,
+      "unknown": 0
+    },
+    "computer_science": {
+      "biology": 0,
+      "computer_science": 3,
+      "economics": 0,
+      "out_of_scope": 0,
+      "unknown": 0
+    },
+    "economics": {
+      "biology": 0,
+      "computer_science": 1,
+      "economics": 2,
+      "out_of_scope": 0,
+      "unknown": 0
+    },
+    "out_of_scope": {
+      "biology": 2,
+      "computer_science": 4,
+      "economics": 0,
+      "out_of_scope": 0,
+      "unknown": 0
+    },
+    "unknown": {
+      "biology": 0,
+      "computer_science": 0,
+      "economics": 0,
+      "out_of_scope": 0,
+      "unknown": 0
+    }
+  },
+  "per_class": {
+    "biology": {
+      "precision": 0.5,
+      "recall": 0.6666666666666666
+    },
+    "computer_science": {
+      "precision": 0.375,
+      "recall": 1.0
+    },
+    "economics": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666
+    },
+    "out_of_scope": {
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "unknown": {
+      "precision": 0.0,
+      "recall": 0.0
+    }
+  },
+  "predictions": [
+    {
+      "id": "cs-eval-001",
+      "expected": "computer_science",
+      "predicted": "computer_science",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.39223227027636803,
+      "margin": 0.18810812504443655
+    },
+    {
+      "id": "cs-eval-002",
+      "expected": "computer_science",
+      "predicted": "computer_science",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.40824829046386296,
+      "margin": 0.016016020187494928
+    },
+    {
+      "id": "cs-eval-003",
+      "expected": "computer_science",
+      "predicted": "computer_science",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.45291081365783836,
+      "margin": 0.11322770341445959
+    },
+    {
+      "id": "bio-eval-001",
+      "expected": "biology",
+      "predicted": "biology",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.45291081365783836,
+      "margin": 0.2172085532623225
+    },
+    {
+      "id": "bio-eval-002",
+      "expected": "biology",
+      "predicted": "biology",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.45226701686664544,
+      "margin": 0.17491691875403087
+    },
+    {
+      "id": "bio-eval-003",
+      "expected": "biology",
+      "predicted": "economics",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.33333333333333337,
+      "margin": 0.013077025723159053
+    },
+    {
+      "id": "econ-eval-001",
+      "expected": "economics",
+      "predicted": "economics",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.3273268353539886,
+      "margin": 0.0994056824347127
+    },
+    {
+      "id": "econ-eval-002",
+      "expected": "economics",
+      "predicted": "computer_science",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.3872983346207417,
+      "margin": 0.0
+    },
+    {
+      "id": "econ-eval-003",
+      "expected": "economics",
+      "predicted": "economics",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.2886751345948129,
+      "margin": 0.1379194623059311
+    },
+    {
+      "id": "oos-eval-001",
+      "expected": "out_of_scope",
+      "predicted": "computer_science",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.2886751345948129,
+      "margin": 0.011325036482198347
+    },
+    {
+      "id": "oos-eval-002",
+      "expected": "out_of_scope",
+      "predicted": "biology",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.41602514716892186,
+      "margin": 0.12735001257410894
+    },
+    {
+      "id": "oos-eval-003",
+      "expected": "out_of_scope",
+      "predicted": "biology",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.30151134457776363,
+      "margin": 0.012836209982950708
+    },
+    {
+      "id": "oos-eval-004",
+      "expected": "out_of_scope",
+      "predicted": "computer_science",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.33333333333333337,
+      "margin": 0.013077025723159053
+    },
+    {
+      "id": "oos-eval-005",
+      "expected": "out_of_scope",
+      "predicted": "computer_science",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.33333333333333337,
+      "margin": 0.0
+    },
+    {
+      "id": "oos-eval-006",
+      "expected": "out_of_scope",
+      "predicted": "computer_science",
+      "in_scope": true,
+      "reason": "accepted",
+      "score": 0.47140452079103173,
+      "margin": 0.13172141054765296
+    }
+  ]
+}
