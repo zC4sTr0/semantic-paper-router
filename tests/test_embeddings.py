@@ -18,3 +18,8 @@ def test_unknown_text_becomes_zero_vector() -> None:
 def test_empty_vocabulary_is_invalid() -> None:
     with pytest.raises(ValueError, match="must not be empty"):
         BagOfWordsEmbedder([])
+
+
+def test_duplicate_vocabulary_is_invalid() -> None:
+    with pytest.raises(ValueError, match="must not contain duplicates"):
+        BagOfWordsEmbedder(["known", "known"])

@@ -18,9 +18,10 @@ The system will work conceptually as follows:
 4. The new vector is compared against the reference vectors using cosine similarity.
 5. The category of the closest reference vector is returned.
 
-The first local version now covers the vector, corpus, and classification
-pieces. It still uses a lexical baseline rather than a trained embedding
-model.
+The first local version covers the vector, corpus, and classification pieces.
+It now also includes an optional Amazon Bedrock Titan adapter. The default
+path remains a lexical baseline so the project can be tested locally without
+AWS credentials or network access.
 
 ## Current status
 
@@ -30,6 +31,12 @@ The package is importable and has a dependency-free cosine implementation, a
 JSON corpus with nine labeled references, a deterministic bag-of-words
 baseline, and a nearest-reference classifier. The baseline is useful for
 testing the flow, but it does not understand synonyms or broader meaning.
+
+The Bedrock integration is an injectable `BedrockTitanEmbedder`. Install the
+optional dependency with `pip install -e ".[bedrock]"`, configure AWS
+credentials through the normal AWS SDK mechanisms, and pass it to
+`SemanticClassifier`. Its request/response contract is covered by offline fake
+client tests; no live AWS call is performed by the test suite.
 
 ## Learning goals
 
@@ -44,7 +51,7 @@ testing the flow, but it does not understand synonyms or broader meaning.
 ```text
 Phase 0 — Repository bootstrap                         [done]
 Phase 1 — Local vectors and cosine similarity           [done]
-Phase 2 — Amazon Bedrock embeddings                     [next]
+Phase 2 — Amazon Bedrock embeddings                     [adapter ready]
 Phase 3 — Semantic classification                      [baseline done]
 Phase 4 — Automated tests and CI
 Phase 5 — Vector database
@@ -62,7 +69,7 @@ semantic-paper-router/
 ├── LEARNING.md      # personal study notes (pt-BR), not for recruiters
 ├── data/            # labeled reference corpus
 ├── src/             # package source
-├── tests/           # test suite (21 tests)
+├── tests/           # test suite (36 tests)
 ├── .gitignore
 └── pyproject.toml
 ```
